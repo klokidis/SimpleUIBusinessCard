@@ -46,13 +46,11 @@ class MainActivity : ComponentActivity() {
             color = MaterialTheme.colorScheme.background
         ) {
             Box(modifier = Modifier.fillMaxSize()) {
-              
                 Column(modifier = Modifier.align(Alignment.Center)) {
                     PersonCard(painterResource(id = R.drawable.android),"Dimitris Klokidis","cs student")
                 }
             }
             Box(modifier = Modifier.fillMaxSize()) {
-                
                 Column(modifier = Modifier.align(Alignment.BottomEnd)) {
                     InfoCard(icon = painterResource(R.drawable.mail_24px),"mail","Dimitrisklokidis@gmail.com")
                 }
@@ -65,14 +63,14 @@ fun PersonCard(image: Painter = painterResource(id = R.drawable.android), name: 
     Column(
         Modifier
             .fillMaxWidth(1f)
-            .padding(10.dp),
+            .padding(10.dp, bottom = 17.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
         ) {
-        Image(painter = image, contentDescription = null,Modifier.size(200.dp))
+        Image(painter = image, contentDescription = null,Modifier.size(170.dp))
         Text(
             text = name,
-            modifier = Modifier.padding(top = 6.dp, bottom = 5.dp),
+            modifier = Modifier.padding(top = 4.dp),
             fontSize = 35.sp,
             textAlign = TextAlign.Justify,
         )
@@ -90,7 +88,7 @@ fun InfoCard(icon: Painter, description: String, name: String) {
     Row(
         Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(10.dp),
 
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center

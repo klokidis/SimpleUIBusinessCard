@@ -46,13 +46,13 @@ class MainActivity : ComponentActivity() {
             color = MaterialTheme.colorScheme.background
         ) {
             Box(modifier = Modifier.fillMaxSize()) {
-                // add your column here (with align modifier)
+              
                 Column(modifier = Modifier.align(Alignment.Center)) {
                     PersonCard(painterResource(id = R.drawable.android),"Dimitris Klokidis","cs student")
                 }
             }
             Box(modifier = Modifier.fillMaxSize()) {
-                // add your column here (with align modifier)
+                
                 Column(modifier = Modifier.align(Alignment.BottomEnd)) {
                     InfoCard(icon = painterResource(R.drawable.mail_24px),"mail","Dimitrisklokidis@gmail.com")
                 }
